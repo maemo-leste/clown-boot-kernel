@@ -851,6 +851,7 @@ int __init omap44xx_prm_init(const struct omap_prcm_init_data *data)
 	 * stock kernel uses custom values of 16 and 200.
 	 */
 	if (of_machine_is_compatible("motorola,droid4") ||
+	    of_machine_is_compatible("motorola,droid3") ||
 	    of_machine_is_compatible("motorola,bionic")) {
 		omap4_prminst_global_reset_time(16, 6);
 		omap44xx_prm_ll_data.reset_system = prm_long_reset;
